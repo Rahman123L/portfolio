@@ -1,11 +1,172 @@
-<!Doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en" class="">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
+
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>PORTFOLIO</title>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+
+    <!-- Tailwind Start -->
+    <script>
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+        extend: {
+            spacing: {
+            13: "3.25rem",
+            },
+            fontFamily: {
+            inter: ["Inter"],
+            ArchivoBlack: ["Archivo Black"],
+            Poppins: ["Poppins"],
+            },
+            animation: {
+            "spin-slow": "spin 3s linear infinite",
+            shake: "shake 1s ease-in-out infinite",
+            },
+            keyframes: {
+            shake: {
+                "0%, 100%": {
+                transform: "rotate(-10deg)",
+                },
+                "50%": {
+                transform: "rotate(10deg)",
+                },
+            },
+            },
+        },
+        },
+    };
+    </script>
+    <!-- Tailwind End -->
+
+    <!-- Css Start -->
+    <style type="text/tailwindcss">
+      body {
+            font-family: 'Inter', sans-serif;
+      }
+      #toggle:checked ~ label div.toggle-circle {
+          @apply translate-x-3;
+      }
+      .hamburger-active > span:nth-child(1) {
+          @apply rotate-45;
+      }
+      .hamburger-active > span:nth-child(2) {
+          @apply scale-0;
+      }
+      .hamburger-active > span:nth-child(3) {
+          @apply -rotate-45;
+      }
+    </style>
+    <!-- Css End -->
+
 </head>
-<body>
+<body class="bg-[#1A202C]">
+
+  <!-- Header Start -->
+  <header class="bg-[#1A202C] fixed top-0 left-0 w-full flex items-center z-20 border-b-2 border-gray-800">
+    <div class="container">
+      <div class="flex items-center justify-between relative">
+        <div class="px-5 lg:px-8 py-6">
+          <a href="index.html"><h1 class="hover:scale-110 duration-1000 font-ArchivoBlack font-normal lg:text-2xl text-[#FBFBFB] cursor-pointer uppercase">Port<span class="text-[#2a5693]">folio</span></h1></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="grow"></div>
+    <div class="flex items-center">
+      <!-- Hamburger -->
+      <button class="block absolute right-4 lg:hidden" id="hamburger" name="hamburger" type="button">
+        <span class="w-[30px] h-[2px] my-2 block bg-white transition duration-300 ease-in-out origin-top-left"></span>
+        <span class="w-[30px] h-[2px] my-2 block bg-white transition duration-300 ease-in-out"></span>
+        <span class="w-[30px] h-[2px] my-2 block bg-white transition duration-300 ease-in-out origin-bottom-left"></span>
+      </button>
+
+      <!-- Navbar -->
+      <nav class="hidden absolute py-5 bg-[#1A202C] lg:border-none border-2 border-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none" id="nav-menu">
+          <ul class="block lg:flex font-bold">
+              <li class="group">
+                <a class="hover:scale-105 lg:hover:scale-125 text-sm text-[#2a5693] py-2 mx-8 flex group-hover:text-[#2a5693] duration-1000 uppercase" href="#">Home</a>
+              </li>
+              <li class="group">
+                <a class="hover:scale-105 lg:hover:scale-125 text-sm text-white py-2 mx-8 flex group-hover:text-[#2a5693] duration-1000 uppercase" href="#">About</a>
+              </li>
+              <li class="group">
+                <a class="hover:scale-105 lg:hover:scale-125 text-sm text-white py-2 mx-8 flex group-hover:text-[#2a5693] duration-1000 uppercase" href="#">Service</a>
+              </li>
+              <li class="group">
+                <a class="hover:scale-105 lg:hover:scale-125 text-sm text-white py-2 mx-8 flex group-hover:text-[#2a5693] duration-1000 uppercase" href="#">Portfolio</a>
+              </li>
+              <li class="group">
+                <a class="hover:scale-105 lg:hover:scale-125 text-sm text-white py-2 mx-8 flex group-hover:text-[#2a5693] duration-1000 uppercase" href="#">Contact</a>
+              </li>
+          </ul>
+      </nav>
+    </div>
+    </header>
+  <!-- Header End -->
+
+  <!-- Hero Start --> 
+  <div class="container px-6 font-inter max-w-md mx-auto sm:max-w-xl md:max-w-5xl lg:flex lg:max-w-full lg:p-0 pb-10 pt-16 lg:pt-20 border-b-2 border-gray-800">
+    <div class="lg:p-16 lg:flex-1">
+        <h3 class="font-inter font-bold mt-10 text-xl lg:mt-[5rem] lg:text-3xl text-[#FBFBFB]">Hello, It's Me</h3>
+        <h3 class="font-inter font-bold mt-1 text-2xl lg:mt-2  lg:text-4xl text-[#FBFBFB]">Rizky Rahman Rambe</h3>
+        <h3 class="font-inter font-bold mt-1 text-xl lg:mt-2 lg:text-3xl text-[#FBFBFB]">And I'm a <span class="text-[#2a5693]">Frontend Developer</span></h3>
+        <p class="mt-2 lg:mt-4 font-inter font-normal lg:text-lg text-justify text-[#718096]">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam dolorem fuga delectus ex quas eum. Enim eaque iste odit placeat.</p>
+    </div>
+    <div class="lg:p-16 hidden lg:flex lg:w-1/2">
+        <img class="w-full h-full object-cover rounded-xl" src="images/hero-image.svg">
+    </div>
+  </div>
+  <!-- Hero End -->
+
+  <!-- About Start -->
+  <div class="container px-6 mt-10 lg:mt-0 font-inter max-w-md mx-auto sm:max-w-xl md:max-w-5xl lg:flex lg:max-w-full lg:p-0 pb-10 border-b-2 border-gray-800">
+    <div class="lg:p-16 lg:flex lg:w-1/2">
+      <img class="w-full h-full object-cover rounded-xl" src="images/hero-image.svg">
+    </div>
+    <div class="lg:p-16 lg:flex-1">
+        <h3 class="font-inter font-bold mt-10 text-2xl lg:mt-[5rem] lg:text-4xl text-[#FBFBFB]">About <span class="text-[#2a5693]">Me</span></h3>
+        <h3 class="font-inter font-bold mt-1 text-xl lg:mt-2 lg:text-3xl text-[#FBFBFB]">Frontend Developer!</h3>
+        <p class="mt-2 lg:mt-4 font-inter font-normal lg:text-lg text-justify text-[#718096]">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat asperiores voluptatem sit iste nobis molestias maxime necessitatibus eveniet sequi, laudantium ratione qui modi, tenetur expedita nesciunt? Aspernatur incidunt odio quas?</p>
+        <div class="mt-5">
+          <button class="hover:scale-110 duration-1000 px-6 py-2 text-xs lg:text-sm font-bold tracking-wide text-black bg-[#2a5693] rounded-full hover:bg-[#1f4b8a] ring ring-[#06224a] shadow-2xl">
+              Read More
+          </button>
+        </div>
+    </div>
+  </div>
+  <!-- About End -->
+  
+  <!-- Services Start -->
+  <div class="container px-6 font-inter max-w-md mx-auto sm:max-w-xl md:max-w-5xl lg:flex lg:p-0 lg:max-w-full pb-10 pt-16 lg:pt-20 border-b-2 border-gray-800">
+    <h3 class="font-inter font-bold text-2xl lg:text-4xl text-[#FBFBFB] text-center">About <span class="text-[#2a5693]">Me</span></h3>
+  </div>
+  <!-- Services End -->
     
+  <!-- Script Start -->
+  <script>
+    // Hamburger
+    const hamburger = document.querySelector ('#hamburger');
+    const navMenu = document.querySelector ('#nav-menu');
+
+    hamburger.addEventListener ('click', function () {
+        hamburger.classList.toggle ('hamburger-active');
+        navMenu.classList.toggle ('hidden');
+    });
+  </script>
+  <!-- Script End -->
+
 </body>
 </html>
